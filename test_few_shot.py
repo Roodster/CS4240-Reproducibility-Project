@@ -120,7 +120,7 @@ if __name__ == '__main__':
     config = yaml.load(open(args.config, 'r'), Loader=yaml.FullLoader)
     if len(args.gpu.split(',')) > 1:
         config['_parallel'] = True
-
+    print(config)
     utils.set_gpu(args.gpu)
     main(config)
 
