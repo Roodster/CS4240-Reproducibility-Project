@@ -1,0 +1,2 @@
+train dataset: torch.Size([3, 80, 80]) (x38400), 64
+tval dataset: torch.Size([3, 80, 80]) (x12000), 20
