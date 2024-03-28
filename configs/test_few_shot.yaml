@@ -1,6 +1,11 @@
 dataset: mini-imagenet
-dataset_args: {split: test}
+dataset_args: { split: test }
 
-load: ./save/models/epoch-last.pth
-
+# load: ./save/models/epoch-last.pth
+# load: ./save/meta_mini-imagenet-1shot_meta-baseline-resnet12/epoch-last.pth
+# load: ./save/meta_mini-imagenet-1shot_meta-baseline-convnet4/epoch-last.pth
+# load: ./save/meta_mini-imagenet-5way-5shot_meta-baseline-convnet4/epoch-last.pth
+load: ./save/meta_mini-imagenet-5way-5shot_meta-baseline-convnet4-64/epoch-last.pth
 # Replace load with load_encoder for loading the encoder only (e.g. for testing Classifier-Baseline)
+# load_encoder: ./save/kd_classifier_mini-imagenet_convnet4/epoch-last.pth
+# load_encoder: save/kd_classifier_mini-imagenet_convnet4-64/epoch-last.pth

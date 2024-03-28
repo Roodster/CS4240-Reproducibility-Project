@@ -20,8 +20,8 @@ from datasets.samplers import CategoriesSampler
 def main(config):
     svname = args.name
     if svname is None:
-        svname = 'meta_{}-{}shot'.format(
-                config['train_dataset'], config['n_shot'])
+        svname = 'meta_{}-{}way-{}shot'.format(
+                config['train_dataset'], config['n_way'], config['n_shot'])
         svname += '_' + config['model'] + '-' + config['model_args']['encoder']
     if args.tag is not None:
         svname += '_' + args.tag
@@ -77,7 +77,7 @@ def main(config):
         tval_sampler = CategoriesSampler(
                 tval_dataset.label, 200,
                 n_way, n_shot + n_query,
-                ep_per_batch=4)
+                ep_per_batch=ep_per_batch)
         tval_loader = DataLoader(tval_dataset, batch_sampler=tval_sampler,
                                  num_workers=8, pin_memory=True)
     else:
@@ -94,7 +94,7 @@ def main(config):
     val_sampler = CategoriesSampler(
             val_dataset.label, 200,
             n_way, n_shot + n_query,
-            ep_per_batch=4)
+            ep_per_batch=ep_per_batch)
     val_loader = DataLoader(val_dataset, batch_sampler=val_sampler,
                             num_workers=8, pin_memory=True)
 
@@ -179,9 +179,9 @@ def main(config):
             for data, _ in tqdm(loader, desc=name, leave=False):
                 x_shot, x_query = fs.split_shot_query(
                         data.cuda(), n_way, n_shot, n_query,
-                        ep_per_batch=4)
+                        ep_per_batch=ep_per_batch)
                 label = fs.make_nk_label(n_way, n_query,
-                        ep_per_batch=4).cuda()
+                        ep_per_batch=ep_per_batch).cuda()
 
                 with torch.no_grad():
                     logits = model(x_shot, x_query).view(-1, n_way)
