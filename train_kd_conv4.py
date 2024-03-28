@@ -122,6 +122,7 @@ def main(config):
         writer.add_scalar('lr', optimizer.param_groups[0]['lr'], epoch)
 
         for data, label in tqdm(train_loader, desc='train', leave=False):
+            # Training procedure inspired by paper: https://doi.org/10.3390/s24061815
             data, label = data.cuda(), label.cuda()
             logits = model(data)
             teacher_logits = teacher(data)

@@ -41,6 +41,7 @@ class ConvNet4(nn.Module):
 
 # ConvNet4-64 (with avg pooling at the end)
 # As proposed in "Enhancing Few-Shot Learning in Lightweight Models via Dual-Faceted Knowledge Distillation"
+# Link to paper: https://doi.org/10.3390/s24061815
 @register('convnet4-64')
 class ConvNet4(nn.Module):
 
