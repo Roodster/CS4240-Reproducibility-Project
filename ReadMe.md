@@ -2,7 +2,7 @@
 
 This repository contains the code for CS4240 Deep Learning Reproducibility Project.
 
-Link to blog post: [https://www.wimverschuren.com/Documents/blog_group_25.pdf](https://www.wimverschuren.com/Documents/blog_group_25.pdf)
+Link to blog post: [https://github.com/Roodster/CS4240-Reproducibility-Project/blob/main/blog_group_25.pdf](https://github.com/Roodster/CS4240-Reproducibility-Project/blob/main/blog_group_25.pdf)
 
 Link to original paper: [Meta-Baseline: Exploring Simple Meta-Learning for Few-Shot Learning](https://arxiv.org/abs/2003.04390).
 
