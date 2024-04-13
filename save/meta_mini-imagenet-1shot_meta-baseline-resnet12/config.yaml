@@ -1,5 +1,5 @@
 ep_per_batch: 4
-load_encoder: ./save/classifier_mini-imagenet_resnet12/epoch-last.pth
+load_encoder: ./save/models/epoch-last.pth
 max_epoch: 20
 model: meta-baseline
 model_args:

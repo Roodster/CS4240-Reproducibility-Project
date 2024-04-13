@@ -1,6 +1,9 @@
-# Few-Shot Meta-Baseline
+# CS4240 Reproducibility Project: Few-Shot Meta-Baseline
 
-This repository contains the code for [Meta-Baseline: Exploring Simple Meta-Learning for Few-Shot Learning](https://arxiv.org/abs/2003.04390).
+This repository contains the code for CS4240 Deep Learning Reproducibility Project.
+
+Link to blog post: <T.B.D.>
+Link to original paper: [Meta-Baseline: Exploring Simple Meta-Learning for Few-Shot Learning](https://arxiv.org/abs/2003.04390).
 
 <img src="https://user-images.githubusercontent.com/10364424/76388735-bfb02580-63a4-11ea-8540-4021961a4fbe.png" width="600">
 
